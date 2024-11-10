@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Image Gallery | COMP1073 Client-Side JavaScript</title>
+    <link rel="stylesheet" href="gallery.css">
+</head>
+<body>
+    <div id="gallery-container">
+        <h1>Image Gallery</h1>
+        
+        <!-- Light/Dark Mode Toggle -->
+        <button id="theme-toggle">Toggle Dark Mode</button>
+        
+        <!-- Image Gallery Section -->
+        <section id="gallery">
+            <figure>
+                <img id="featured-image" src="flowers-pink-large.jpg" alt="Pink Flowers" width="1200" height="800">
+                <figcaption id="image-caption">Pink Flowers: A symbol of grace and joy!</figcaption>
+            </figure>
+            
+            <!-- Shuffle Button -->
+            <button id="shuffle-button">Shuffle Image</button>
+            
+            <ul>
+                <li><img src="flowers-pink-small.jpg" alt="Pink Flowers" onclick="updateImage('flowers-pink', 'Pink Flowers: A symbol of grace and joy!')"></li>
+                <li><img src="flowers-purple-small.jpg" alt="Purple Flowers" onclick="updateImage('flowers-purple', 'Purple Flowers: Represents royalty and elegance!')"></li>
+                <li><img src="flowers-red-small.jpg" alt="Red Flowers" onclick="updateImage('flowers-red', 'Red Flowers: Signifies love and passion!')"></li>
+                <li><img src="flowers-white-small.jpg" alt="White Flowers" onclick="updateImage('flowers-white', 'White Flowers: Symbolizes purity and innocence!')"></li>
+                <li><img src="flowers-yellow-small.jpg" alt="Yellow Flowers" onclick="updateImage('flowers-yellow', 'Yellow Flowers: Represents friendship and happiness!')"></li>
+            </ul>
+        </section>
+    </div>
+    <script src="gallery.js"></script>
+	<!-- PHOTO CREDITS
+	Sunflowers in the hamlet Dernekamp, Kirchspiel, Dülmen, North Rhine-Westphalia, Germany
+	By Dietmar Rabich - Own work, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=61514522
+
+	Poppies in cornfield, Dülmen, North Rhine-Westphalia, Germany
+	By Dietmar Rabich - Own work, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=40957238
+
+	Daffodils in Sentmaring park, Münster, North Rhine-Westfalia, Germany
+	By Dietmar Rabich - Own work, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=48211466
+
+	Sentmaring Park, Münster, North Rhine-Westphalia, Germany
+	By Dietmar Rabich - Own work, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=48576226
+
+	Market in Münster, North Rhine-Westphalia, Germany
+	By Dietmar Rabich - Own work, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=62071586
+	-->
+</body>
+</html>

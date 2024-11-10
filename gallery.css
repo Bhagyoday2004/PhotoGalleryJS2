@@ -1,0 +1,179 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #e0f7fa; /* Light teal background */
+    color: #333;
+}
+
+/* Centered container for the gallery */
+#gallery-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+}
+
+/* Gallery title */
+h1 {
+    font-size: 2.5em;
+    color: #00796b; /* Teal color for title */
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+/* Styling for the gallery section */
+#gallery {
+    width: 100%;
+    max-width: 800px;
+    padding: 20px;
+    background-color: #ffffff; /* White background for gallery box */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+figure {
+    margin: 0;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    border: 2px solid #00acc1; /* Bright teal border */
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Featured image styling */
+#featured-image {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+#featured-image:hover {
+    transform: scale(1.03);
+}
+
+figcaption {
+    font-size: 1.3em;
+    color: #555;
+    padding: 10px;
+    text-align: center;
+    font-style: italic;
+    border-top: 1px solid #eee;
+    background-color: #fafafa;
+}
+
+/* Thumbnail gallery styling */
+ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    padding: 20px 0;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+li {
+    transition: transform 0.3s ease;
+}
+
+li:hover {
+    transform: translateY(-5px);
+}
+
+/* Thumbnail images styling */
+li img {
+    width: 100px;
+    height: auto;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    filter: grayscale(80%);
+    opacity: 0.8;
+}
+
+li img:hover {
+    transform: scale(1.1);
+    border-color: #00acc1; /* Bright teal for hover effect */
+    filter: grayscale(0%);
+    opacity: 1;
+}
+
+/* Active thumbnail styling */
+li.active img {
+    border-color: #00796b; /* Teal color for active thumbnail */
+    filter: grayscale(0%);
+    opacity: 1;
+}
+
+/* Subtle box-shadow and rounded corners */
+#gallery,
+figure,
+ul li img {
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Zoom effect on featured image */
+#featured-image:hover {
+    transform: scale(1.1);
+}
+
+/* Light/Dark Mode Toggle Button */
+#theme-toggle,
+#shuffle-button {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    color: #ffffff;
+    background-color: #00796b;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+#theme-toggle:hover,
+#shuffle-button:hover {
+    background-color: #00acc1;
+}
+
+/* Dark mode styling */
+body.dark-mode {
+    background-color: #1e1e1e;
+    color: #f1f1f1;
+}
+
+body.dark-mode #gallery {
+    background-color: #333;
+}
+
+body.dark-mode figcaption {
+    background-color: #444;
+    color: #e0f7fa;
+}
+
+body.dark-mode #theme-toggle,
+body.dark-mode #shuffle-button {
+    background-color: #333;
+    color: #00acc1;
+}
